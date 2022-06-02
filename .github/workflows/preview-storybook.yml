@@ -62,4 +62,4 @@ jobs:
     runs-on: ubuntu-latest
 #    if: ${{ github.event.workflow_run.event != 'pull_request' && github.event.workflow_run.conclusion == 'success' }}
     steps:
-      - run: "echo ${{ toJSON ( github.event.workflow_run) }} "
+      - run: echo '${{ toJSON(github.event.workflow_run) }}'
