@@ -26,6 +26,12 @@ jobs:
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
+      - name: upload website build artifact
+        uses: actions/upload-artifact@v3
+        with:
+          name: sites
+          path: packages/website/dist
+
   milestone:
     runs-on: ubuntu-latest
     steps:
